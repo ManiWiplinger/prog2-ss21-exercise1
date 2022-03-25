@@ -2,6 +2,11 @@ package at.ac.fhcampuswien.ManuelWiplinger;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DayOneTest {
@@ -60,22 +65,22 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Calculate Total Fuel of Masses: 12,14,1969")
-    void TestCalcTotalFuel_3Integers(){
+    @DisplayName("Calculate Total Fuel of Masses: 0,0")
+    void TestCalcTotalFuel_0(){
         DayOne dayOne= new DayOne();
-        int[] values = {12,14,1969};
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(0,0));
         int actual = dayOne.calcTotalFuel(values);
-        int expected = 2+2+654;
+        int expected = 0;
         assertEquals(expected,actual);
     }
 
     @Test
-    @DisplayName("Calculate Total Fuel of Masses: 0,0")
-    void TestCalcTotalFuel_0(){
+    @DisplayName("Calculate Total Fuel of Masses: 12,14,1969")
+    void TestCalcTotalFuel_3Integers(){
         DayOne dayOne= new DayOne();
-        int[] values = {0,0};
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(12,14,1969));
         int actual = dayOne.calcTotalFuel(values);
-        int expected = 0;
+        int expected = 2+2+654;
         assertEquals(expected,actual);
     }
 }
