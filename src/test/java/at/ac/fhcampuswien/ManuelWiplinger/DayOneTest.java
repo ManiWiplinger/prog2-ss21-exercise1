@@ -105,6 +105,16 @@ public class DayOneTest {
     }
 
     @Test
+    @DisplayName("Part2: Calculate Total Fuel of Masses: 1969")
+    void TestCalcTotalFuelPartTwo_1969(){
+        DayOne dayOne= new DayOne();
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(1969));
+        int actual = dayOne.calcTotalFuelPartTwo(values);
+        int expected = 966;
+        assertEquals(expected,actual);
+    }
+
+    @Test
     @DisplayName("Part2: Calculate Total Fuel of Masses: 14,1969,100756")
     void TestCalcTotalFuelPartTwo_3Integers(){
         DayOne dayOne= new DayOne();

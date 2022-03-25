@@ -33,7 +33,11 @@ public class DayOne {
     }
 
     public int calcTotalFuelPartTwo(ArrayList<Integer> values) {
-        return 0;
+        int total = 0;
+        for (int value:values) {
+            total +=calcFuelByMass(value);
+        }
+        return total;
     }
 }
 
