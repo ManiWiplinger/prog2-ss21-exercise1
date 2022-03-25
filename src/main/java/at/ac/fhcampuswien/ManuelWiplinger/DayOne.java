@@ -8,5 +8,8 @@ public class DayOne {
         return mass/3-2;
     }
 
+    public int calcTotalFuel(int[] values) {
+        return 0;
+    }
 }
 

@@ -68,4 +68,14 @@ public class DayOneTest {
         int expected = 2+2+654;
         assertEquals(expected,actual);
     }
+
+    @Test
+    @DisplayName("Calculate Total Fuel of Masses: 0,0")
+    void TestCalcTotalFuel_0(){
+        DayOne dayOne= new DayOne();
+        int[] values = {0,0};
+        int actual = dayOne.calcTotalFuel(values);
+        int expected = 0;
+        assertEquals(expected,actual);
+    }
 }
