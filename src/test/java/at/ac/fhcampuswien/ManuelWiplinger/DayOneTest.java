@@ -3,11 +3,11 @@ package at.ac.fhcampuswien.ManuelWiplinger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+//Link to Git-Repo: https://github.com/ManiWiplinger/prog2-ss21-exercise1.git
 
 public class DayOneTest {
     @Test
