@@ -21,23 +21,30 @@ public class DayOne {
         return total;
     }
 
+    public static int calcTotalFuelPartTwo(ArrayList<Integer> values) {
+        int total = 0;
+        int temp;
+        for (int value:values) {
+            temp=calcFuelByMass(value);
+            total+=temp;
+            while(calcFuelByMass(temp)>0){
+                temp =calcFuelByMass(temp);
+                total += temp;
+            }
+        }
+        return total;
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         File puzzle = new File("src/main/resources/Puzzle.txt");
         Scanner scanner = new Scanner(puzzle);
-        ArrayList<Integer> Masses = new ArrayList<Integer>();
+        ArrayList<Integer> Masses = new ArrayList<>();
         while(scanner.hasNextLine())
         {
             Masses.add(Integer.parseInt(scanner.nextLine()));
         }
-        System.out.println(calcTotalFuel(Masses));
-    }
-
-    public int calcTotalFuelPartTwo(ArrayList<Integer> values) {
-        int total = 0;
-        for (int value:values) {
-            total +=calcFuelByMass(value);
-        }
-        return total;
+        System.out.println("Part1: "+calcTotalFuel(Masses));
+        System.out.println("Part2: "+calcTotalFuelPartTwo(Masses));
     }
 }
 
