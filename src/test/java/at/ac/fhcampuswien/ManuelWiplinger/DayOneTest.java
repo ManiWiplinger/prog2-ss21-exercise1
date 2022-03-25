@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DayOneTest {
     @Test
-    @DisplayName("Mass = 12")
+    @DisplayName("Calculate Fuel of Mass = 12")
     void TestCalcFuelByMass_12(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(12);
@@ -15,7 +15,7 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Mass = 14")
+    @DisplayName("Calculate Fuel of Mass = 14")
     void TestCalcFuelByMass_14(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(14);
@@ -24,7 +24,7 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Mass = 1969")
+    @DisplayName("Calculate Fuel of Mass = 1969")
     void TestCalcFuelByMass_1969(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(1969);
@@ -33,7 +33,7 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Mass = 100756")
+    @DisplayName("Calculate Fuel of Mass = 100756")
     void TestCalcFuelByMass_100756(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(100756);
@@ -42,7 +42,7 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Mass = 0")
+    @DisplayName("Calculate Fuel of Mass = 0")
     void TestCalcFuelByMass_0(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(0);
@@ -51,11 +51,21 @@ public class DayOneTest {
     }
 
     @Test
-    @DisplayName("Mass = -20")
+    @DisplayName("Calculate Fuel of Mass = -20")
     void TestCalcFuelByMass_negativ20(){
         DayOne dayOne= new DayOne();
         int actual = dayOne.calcFuelByMass(-20);
         int expected = 0;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Calculate Total Fuel of Masses: 12,14,1969")
+    void TestCalcTotalFuel_3Integers(){
+        DayOne dayOne= new DayOne();
+        int[] values = {12,14,1969};
+        int actual = dayOne.calcTotalFuel(values);
+        int expected = 2+2+654;
         assertEquals(expected,actual);
     }
 }

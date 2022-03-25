@@ -2,6 +2,11 @@ package at.ac.fhcampuswien.ManuelWiplinger;
 
 public class DayOne {
     public int calcFuelByMass(int mass) {
-        return 0;
+        if(mass <= 0){
+            return 0;
+        }
+        return mass/3-2;
     }
+
 }
+
