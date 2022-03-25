@@ -31,5 +31,9 @@ public class DayOne {
         }
         System.out.println(calcTotalFuel(Masses));
     }
+
+    public int calcTotalFuelPartTwo(ArrayList<Integer> values) {
+        return 0;
+    }
 }
 

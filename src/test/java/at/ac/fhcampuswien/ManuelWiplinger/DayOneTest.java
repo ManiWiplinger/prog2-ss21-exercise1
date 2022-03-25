@@ -83,4 +83,34 @@ public class DayOneTest {
         int expected = 2+2+654;
         assertEquals(expected,actual);
     }
+
+    @Test
+    @DisplayName("Part2: Calculate Total Fuel of Masses: 0,0")
+    void TestCalcTotalFuelPartTwo_0(){
+        DayOne dayOne= new DayOne();
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(0,0));
+        int actual = dayOne.calcTotalFuelPartTwo(values);
+        int expected = 0;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Part2: Calculate Total Fuel of Masses: 14")
+    void TestCalcTotalFuelPartTwo_14(){
+        DayOne dayOne= new DayOne();
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(14));
+        int actual = dayOne.calcTotalFuelPartTwo(values);
+        int expected = 2;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Part2: Calculate Total Fuel of Masses: 14,1969,100756")
+    void TestCalcTotalFuelPartTwo_3Integers(){
+        DayOne dayOne= new DayOne();
+        ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(14,1969,100756));
+        int actual = dayOne.calcTotalFuelPartTwo(values);
+        int expected = 2+966+50346;
+        assertEquals(expected,actual);
+    }
 }
